@@ -1,12 +1,14 @@
   name: VariableDemo
   on: [push]
   env:
+    ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     user_name: "Chaminda"
     demo_name: "Variable Demo"
   jobs:
     VariableUsageJob:
       runs-on: ubuntu-latest
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         job_var1: "job variable value"
       steps:
       - name: Using Workflow Variables
